@@ -1,0 +1,47 @@
+<%
+  let feed = new Feed({
+    title: $.site.name,
+    description: $.site.description,
+    id: $.site.url,
+    link: $.site.url,
+    language: "en",
+    image: $.site.url + 'favicon.png',
+    favicon: $.site.url + 'favicon.png',
+    copyright: "All rights reserved",
+    updated: new Date(2013, 6, 14), // optional, default = today
+    generator: "Turtles", // optional, default = 'Feed for Node.js'
+    feedLinks: {
+      json: $.site.url + "/json",
+      atom: $.site.url + "/atom.xml",
+      rss: $.site.url + "/feed.rss"
+    },
+    author: {
+      name: $.site.author,
+      email: $.site.author_email,
+      link: $.site.url
+    }
+  });
+   
+  $.posts.forEach(post => {
+    feed.addItem({
+      title: post.title,
+      id: post.url,
+      link: post.url,
+      description: post.summary_text,
+      content: post.body,
+      author: [
+        {
+          name: post.author,
+        email: post.author_email,
+        link: post.url
+        },
+      ],
+      date: new Date(post.pretty_date),
+      image: post.teaser_image
+    });
+  });
+
+  feed.addCategory("Technology");
+
+  return feed;
+%>

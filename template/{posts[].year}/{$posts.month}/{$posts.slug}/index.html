@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title><%- $.site.name %></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <%- include('../../../partials/header.ejs') %>
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <meta name="description" content="<%= $.$posts.summary_text %>">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="<%= $.$posts.title %>">
+        <meta property="og:url" content="http://keltdockins.com<%= $.$posts.url %>">
+        <meta property="og:site_name" content="Kelt Dockins">
+        <meta property="og:description" content="<%= $.$posts.summary_text %>">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="<%= $.$posts.title %>">
+        <meta name="twitter:description" content="<%= $.$posts.summary_text %>">
+    </head>
+<body>
+
+    <%- include('../../../partials/nav') %>
+
+    <div class="container mx-auto">
+        <div class="flex">
+            <div class="w-3/3 min-w-full px-1">
+                <div class="flex items-center">
+                    <div class="w-1/5 pt-4">
+                        <a href="<%= $.$posts.prev_url ? $.$posts.prev_url : '/' %>">Previous article</a>
+                    </div>
+                    <div class="w-3/5">
+                        <h1 class="mt-8 text-center text-3xl">
+                            <%= $.$posts.title %>
+                        </h1>        
+                    </div>
+                    <div class="w-1/5 pt-4 text-right">
+                        <a href="<%= $.$posts.next_url ? $.$posts.next_url : '/' %>">Next article</a>            
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="post-body h-full py-8 bg-white border-t md:mx-20">
+                        <%- $.$posts.body %>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+
+        <div id="disqus_thread"></div>
+
+        <script>
+            var disqus_shortname = '<%= $.site.disqus_shortname %>';
+            var disqus_url = '<%= $.site.url %>/<%= $.$posts.url %>';
+          
+            (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//go.disqus.com/embed.js';
+
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+
+    </div>
+</body>
+</html>

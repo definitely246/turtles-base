@@ -1,0 +1,3 @@
+Turtles are reptiles of the order Testudines characterized by a special bony or cartilaginous shell developed from their ribs and acting as a shield. "Turtle" may refer to the order as a whole (American English) or to fresh-water and sea-dwelling testudines (British English). The order Testudines includes both extant (living) and extinct species. The earliest known members of this group date from the Middle Jurassic, making turtles one of the oldest reptile groups and a more ancient group than snakes or crocodilians. Of the 356 known species alive today, some are highly endangered.
+
+<a class="text-blue-700 hover:underline" blank="target" href="https://en.wikipedia.org/wiki/Turtle">Learn more &raquo;</a>

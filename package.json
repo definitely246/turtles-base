@@ -1,0 +1,36 @@
+{
+  "name": "mysite.com",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "main": "turtles/serve.js",
+  "scripts": {
+    "build": "npm run convert; npm run generate",
+    "convert": "node turtles/convert.js",
+    "generate": "node turtles/generate.js",
+    "watch": "watch 'npm run build' ./template ./content",
+    "serve": "node turtles/serve.js",
+    "tailwind": "npx tailwindcss build template/assets/style.css -o template/assets/site.css -c template/assets/tailwind-config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "feed": "^4.1.0",
+    "fs-extra": "^7.0.0",
+    "gatt": "^1.0.5",
+    "gray-matter": "^4.0.1",
+    "ignore": "^5.0.2",
+    "live-server": "^1.2.1",
+    "lodash": "^4.17.15",
+    "markdown-it": "^8.4.2",
+    "moment": "^2.22.2",
+    "pad": "^2.2.1",
+    "slugify": "^1.3.1",
+    "striptags": "^3.1.1",
+    "tailwindcss": "^1.4.6",
+    "watch": "^1.0.2",
+    "yaml-front-matter": "^4.0.0"
+  },
+  "devDependencies": {}
+}

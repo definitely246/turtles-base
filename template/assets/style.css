@@ -1,0 +1,90 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+body {
+	font-size: 18px;
+	font-style: normal;
+	font-family: 'Merriweather', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lora', serif;
+}
+
+a {
+	font-family: 'Lora', serif;
+}
+
+a:hover {
+
+}
+
+.post-body {
+	@apply text-gray-800;
+}
+
+.post-body p {
+	@apply py-4;
+}
+
+.post-body pre {
+	@apply py-4;
+}
+
+.post-body h1 {
+	@apply text-3xl;
+	@apply pt-6;
+	@apply pb-4;
+}
+
+.post-body h2 {
+	@apply text-2xl;
+	@apply pt-6;
+	@apply pb-4;
+}
+
+.post-body h3 {
+	@apply text-xl;
+	@apply pt-6;
+	@apply pb-4;
+}
+
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+	@apply text-lg;
+	@apply pt-6;
+	@apply pb-4;
+}
+
+.text-truncate {
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-truncate:before {
+	content:'';
+	width:100%;
+	height:100%;    
+	position:absolute;
+	left:0;
+	top:0;
+	background:linear-gradient(transparent 150px, white);
+}
+
+.h-25 {
+	height: 25ex;
+}
+
+.h-50 {
+	height: 50ex;
+}
+
+.max-height-200 {
+	max-height: 200px;
+}

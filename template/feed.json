@@ -1,0 +1,1 @@
+<% let feed = include('partials/feeds.ejs') %><%- feed.json1() %>
